@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Posts API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="logo">JSON<span>Feed</span></div>
+    <div class="badge">JSONPlaceholder</div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('posts')">📄 Posts</button>
+    <button class="tab" onclick="switchTab('users')">👤 Usuarios</button>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="loader"><div class="spinner"></div>Cargando datos…</div>
+</main>
+
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal">
+    <div class="modal-handle"></div>
+    <div class="modal-id" id="modal-id"></div>
+    <div class="modal-title" id="modal-title"></div>
+    <div class="modal-body" id="modal-body"></div>
+    <button class="modal-close" onclick="closeModalDirect()">Cerrar</button>
+  </div>
+</div>
+
+<button class="fab" onclick="loadCurrent()" title="Recargar">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#0d0d0d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="23 4 23 10 17 10"/>
+    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+  </svg>
+</button>
+
+<script src="app.js"></script>
+</body>
+</html>
